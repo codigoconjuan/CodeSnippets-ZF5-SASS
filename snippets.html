@@ -1,0 +1,1799 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Code Snippets para Foundation 5 con SASS</title>
+	<link rel="stylesheet" href="librerias/prism.css">
+	<script src="librerias/jquery-1.11.3.min.js"></script>
+	<script src="librerias/smooth-scroll.min.js"></script>
+	<script src="librerias/prism.js"></script>
+
+</head>
+<body>
+<header class="masthead">
+		<div class="wrapper">
+			<h1>Foundation y SASS - Creando un sitio web</h1>
+			<div class="sub">
+				por: Juan Pablo de la torre Valdez ( @JuanDevWP ) <br/>
+				www.easy-webdev.com
+			</div>
+		</div>
+</header>
+
+    <nav id="toc" class="navigation">
+        <ul class="wrapper">
+					<li>
+        		<a data-scroll href="#capitulo-01">Capitulo 1: Introducción</a>
+        		<ul>
+        			<li><a data-scroll  href="#video-0101">1.1 Introducción</a></li>
+							<li><a data-scroll  href="#video-0102">1.2 Sobre los Ejercicios</a></li>
+							<li><a data-scroll  href="#video-0103">1.3 Sobre los Code Snippets</a></li>
+        		</ul>
+        	</li>
+
+        	<li>
+        		<a data-scroll href="#capitulo-02">Capitulo 2: Ambiente de Desarrollo en Windows</a>
+        		<ul>
+        			<li><a data-scroll  href="#video-0201">2.2 Instalar Ruby, Git y Node</a></li>
+							<li><a data-scroll  href="#video-0202">2.2 Instalando Gems</a></li>
+							<li><a data-scroll  href="#video-0203">2.3 Creando nuevo proyecto</a></li>
+							<li><a data-scroll  href="#video-0204">2.4 Instalando RubyDevKit</a></li>
+        		</ul>
+        	</li>
+
+        	<li>
+        		<a data-scroll href="#capitulo-03">Capitulo 3: Ambiente de Desarrollo en MAC</a>
+        		<ul>
+        			<li><a data-scroll  href="#video-0301">3.1 Instalar Git y Node</a></li>
+							<li><a data-scroll  href="#video-0302">3.2 Instalando Gems</a></li>
+							<li><a data-scroll  href="#video-0303">3.3 Creando nuevo proyecto</a></li>
+							<li><a data-scroll  href="#video-0304">3.4 Como actualizar gems desde OSX</a></li>
+        		</ul>
+        	</li>
+            <li>
+                <a data-scroll href="#capitulo-04">Capitulo 4: Conociendo la Estructura de Foundation y SASS</a>
+                <ul>
+                    <li><a data-scroll  href="#video-0401">4.1 - El archivo config.rb</a></li>
+										<li><a data-scroll  href="#video-0402">4.2 - El diseño que realizaremos en este curso</a></li>
+                </ul>
+            </li>
+            <li>
+                <a data-scroll href="#capitulo-05">Capitulo 5: HTML Para la estructura de nuestro sitio web</a>
+                <ul>
+                    <li><a data-scroll  href="#video-0501">5.1 Creando el Header y Footer con Navegación</a></li>
+                    <li><a data-scroll  href="#video-0502">5.2 Agregando classes de Foundation y creando un Menú Responsive</a></li>
+                    <li><a data-scroll  href="#video-0503">5.3 Creando un Dropdown a nuestro Menú</a></li>
+                    <li><a data-scroll  href="#video-0504">5.4 Agregando Logotipo a sitio web</a></li>
+                    <li><a data-scroll  href="#video-0505">5.5 Finalizando el Footer</a></li>
+                    <li><a data-scroll  href="#video-0506">5.6 Enlazando páginas desde Menú</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a data-scroll href="#capitulo-06">Capitulo 6: Creando nuestra página Principal</a>
+                <ul>
+                    <li><a data-scroll  href="#video-0601">6.1 Mostrando imagenes para distintos tamaños</a></li>
+                    <li><a data-scroll  href="#video-0602">6.2 HTML para nuestro Slider</a></li>
+                    <li><a data-scroll  href="#video-0603">6.3 Agregando clases para Orbit Slider</a></li>
+                    <li><a data-scroll  href="#video-0604">6.4 Trabajando con Paneles y Grid en Foundation</a></li>
+                    <li><a data-scroll  href="#video-0605">6.5 Finalizando nuestro Homepage y creando una galeria con Block Grid</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a data-scroll href="#capitulo-07">Capitulo 7: Creando las páginas interiores</a>
+                <ul>
+                    <li><a data-scroll  href="#video-0701">7.1 Creando la sección de Servicios con classes de Foundation</a></li>
+                    <li><a data-scroll  href="#video-0702">7.2 Utilizando Push y Pull Columns</a></li>
+                    <li><a data-scroll  href="#video-0703">7.3 Agregando una imagen Destacada</a></li>
+                    <li><a data-scroll  href="#video-0704">7.4 Introduciendo Data Interchange para imagenes</a></li>
+                    <li><a data-scroll  href="#video-0705">7.5 Data Interchange para Habitaciones en Index</a></li>
+                    <li><a data-scroll  href="#video-0706">7.6 Creando una Galeria con ZURB Foundation</a></li>
+                    <li><a data-scroll  href="#video-0707">7.7 Mostrando las imagenes con un Modal</a></li>
+                    <li><a data-scroll  href="#video-0708">7.8 Creando la sección de Habitaciones</a></li>
+                    <li><a data-scroll  href="#video-0709">7.9 Agregando un Accordion para Habitaciones</a></li>
+                    <li><a data-scroll  href="#video-0710">7.10 Construyendo una Galeria para Habitaciones</a></li>
+                    <li><a data-scroll  href="#video-0711">7.11 Construyendo un Formulario de Contacto para Habitaciones</a></li>
+                    <li><a data-scroll  href="#video-0712">7.12 Construyendo un Formulario de Contacto para Contacto</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a data-scroll href="#capitulo-08">Capitulo 8: Comenzando a trabajar con SASS</a>
+                <ul>
+                    <li><a data-scroll  href="#video-0801">8.1 Creando un archivo Custom</a></li>
+                    <li><a data-scroll  href="#video-0802">8.2 Asignando colores primarios y trabajando con TopBar</a></li>
+                    <li><a data-scroll  href="#video-0803">8.3 Editando SASS de Drop Down y Top Bar</a></li>
+                    <li><a data-scroll  href="#video-0804">8.4 ¿Qué es la función rem-calc?</a></li>
+                    <li><a data-scroll  href="#video-0805">8.5 Cambiando el SCSS de Orbit Slider</a></li>
+                    <li><a data-scroll  href="#video-0806">8.6 Agregando Estilos titulos</a></li>
+                    <li><a data-scroll  href="#video-0807">8.7 Utilizando Mixins para el Panel</a></li>
+                    <li><a data-scroll  href="#video-0808">8.8 Utilizando Mixins para los botones</a></li>
+                    <li><a data-scroll  href="#video-0809">8.9 Creando el Footer con SCSS y la navegación con Mixins</a></li>
+                    <li><a data-scroll  href="#video-0810">8.10 Finalizando el Footer</a></li>
+                    <li><a data-scroll  href="#video-0811">8.11 Media Queries en SASS y Foundation</a></li>
+                    <li><a data-scroll  href="#video-0812">8.12 Editando estilos para la imagen destacada</a></li>
+                    <li><a data-scroll  href="#video-0813">8.13 Editando SCSS para Accordion</a></li>
+                    <li><a data-scroll  href="#video-0814">8.14 Cambiando el SCSS de nuestro Formulario</a></li>
+                    <li><a data-scroll  href="#video-0815">8.15 Creando un Menu de Redes Sociales con Foundation Icons</a></li>
+                    <li><a data-scroll  href="#video-0816">8.16 jQuery para detectar la página actual</a></li>
+                    <li><a data-scroll  href="#video-0817">8.17 Agregando una fuente de Google Fonts</a></li>
+                    <li><a data-scroll  href="#video-0818">8.18 Data Interchange para cambiar el HTML en base al dispositivo</a></li>
+                    <li><a data-scroll  href="#video-0819">8.19 Estilos para Data-Interchange HTML</a></li>
+                    <li><a data-scroll  href="#video-0819">8.20 Ajustes finales para móviles</a></li>
+                    <li><a data-scroll  href="#video-0820">8.21 Ventajas de SASS</a></li>
+                </ul>
+            </li>
+
+						<li>
+								<a data-scroll href="#capitulo-09">Capitulo 9: Ventajas de Utilizar SASS</a>
+								<ul>
+										<li><a data-scroll  href="#video-0901">8.21 Ventajas de SASS</a></li>
+								</ul>
+						</li>
+        </ul>
+    </nav>
+<div class="wrapper index">
+
+
+<section id="capitulo-01" class="chapter">
+<h2 class="chapter-title">Capitulo 1: Introducción</h2>
+
+	<article id="video-0101" class="video">
+	<h3 class="titulo">1.1 Introducción</h3>
+	<h4>No hay snippets para este video</h4>
+	</article><!-- .movie -->
+
+	<article id="video-0102" class="video">
+	<h3 class="titulo">1.2 Sobre los Ejercicios</h3>
+	<h4>No hay snippets para este video</h4>
+	</article><!-- .movie -->
+
+	<article id="video-0103" class="video">
+	<h3 class="titulo">1.3 Sobre los Code Snippets</h3>
+	<h4>No hay snippets para este video</h4>
+	</article><!-- .movie -->
+</section>
+
+
+<section id="capitulo-02" class="chapter">
+<h2 class="chapter-title">Capitulo 2: Ambiente de Desarrollo en Windows</h2>
+
+	<article id="video-0201" class="video">
+	<h3 class="titulo">2.1 Instalar Ruby, Git y Node</h3>
+	<h4>En la terminal de Windows:</h4>
+	<pre><code class="language-markup">
+	node -v<br/>
+
+	npm -v<br/>
+
+	gem -v<br/>
+	</code></pre>
+	</article><!-- .movie -->
+
+
+	<article id="video-0202" class="video">
+	<h3 class="titulo">2.2 Instalando Gems</h3>
+	<h4>En la terminal de Windows:</h4>
+	<pre><code class="language-markup">
+    npm - v<br/>
+
+    npm install -g bower grunt-cli<br/>
+
+    gem -v<br/>
+
+    gem install foundation<br/>
+
+    foundation<br/>
+
+	gem install sass<br/>
+
+	sass -v<br/>
+
+	gem install compass<br/>
+
+	gem install bundler<br/>
+	</code></pre>
+	</article><!-- .movie -->
+
+
+
+	<article id="video-0203" class="video">
+	<h3 class="titulo">2.3 Creando Proyecto en Windows</h3>
+	<h4>En la terminal de Windows:</h4>
+	<pre><code class="language-markup">
+	cd Desktop<br/>
+
+	foundation new hotel <br/>
+
+	bundle<br/>
+
+	bundle exec compass watch<br/>
+	</code></pre>
+	</article><!-- .movie -->
+
+
+	<article id="video-0204" class="video">
+	<h3 class="titulo">2.4 Instalando RubyDevKit</h3>
+	<h4>En la terminal de Windows:</h4>
+	<pre><code class="language-markup">
+	cd RubyDevKit<br/>
+
+	ruby dk.rb init<br/>
+
+	ruby dk.rb install<br/>
+
+	gem update<br/>
+	</code></pre>
+	</article><!-- .movie -->
+
+</section>
+
+<section id="capitulo-03" class="chapter">
+<h2 class="chapter-title">Capitulo 3: Ambiente de Desarrollo en Windows</h2>
+
+	<article id="video-0301" class="video">
+	<h3 class="titulo">3.1 Instalar Git y Node</h3>
+	<h4>En la terminal de OSX:</h4>
+	<pre><code class="language-markup">
+    node -v<br/>
+
+    npm -v<br/>
+
+    git<br/>
+	</code></pre>
+	</article><!-- .movie -->
+
+	<article id="video-0302" class="video">
+	<h3 class="titulo">3.2 Instalando Gems</h3>
+	<h4>En la terminal de OSX:</h4>
+	<pre><code class="language-markup">
+	gem -v<br/>
+
+	sudo gem update --system<br/>
+
+	sudo npm install -g bower grunt-cli<br/>
+
+	sudo gem install foundation<br/>
+
+	foundation <br/>
+
+	sudo gem install sass<br/>
+
+	sass -v<br/>
+
+	sudo gem install compass<br/>
+
+	compass -v<br/>
+
+	sudo gem install bundler<br/>
+
+	bundler -v<br/>
+	</code></pre>
+	</article><!-- .movie -->
+
+	<article id="video-0303" class="video">
+	<h3 class="titulo">3.3 Creando Proyecto</h3>
+	<h4>En la terminal de OSX:</h4>
+	<pre><code class="language-markup">
+	foundation<br/>
+
+	pwd<br/>
+
+	ls<br/>
+
+	cd Desktop<br/>
+
+	foundation new hotelWebSite<br/>
+
+	cd hotelWebSite<br/>
+
+	bundle<br/>
+
+	bundle exec compass watch<br/>
+	</code></pre>
+	</article><!-- .movie -->
+
+	<article id="video-0304" class="video">
+	<h3 class="titulo">3.4 Como actualizar gems desde OSX</h3>
+	<h4>En la terminal de OSX:</h4>
+	<pre><code class="language-markup">
+
+	sudo gem update<br/>
+
+	foundation<br/>
+
+	</code></pre>
+	</article><!-- .movie -->
+
+</section>
+
+
+
+<section id="capitulo-04" class="chapter">
+<h2 class="chapter-title">Capitulo 4: Conociendo la Estructura de Foundation y SASS</h2>
+
+	<article id="video-0401" class="video">
+	<h3 class="titulo">4.1 El archivo config.rb</h3>
+	<h4>No hay snippets para este video</h4>
+	</article><!-- .movie -->
+
+	<article id="video-0402" class="video">
+	<h3 class="titulo">4.2 - El diseño que realizaremos en este curso</h3>
+	<h4>No hay snippets para este video</h4>
+	</article><!-- .movie -->
+</section>
+
+
+<section id="capitulo-05" class="chapter">
+<h2 class="chapter-title">Capitulo 5: HTML Para la estructura de nuestro sitio web</h2>
+
+	<article id="video-0501" class="video">
+	<h3 class="titulo">5.1 Creando el Header y Footer con Navegación</h3>
+	<h4>En index.html </h4>
+	<pre><code class="language-markup">
+	  &lt;header>
+	        &lt;nav>
+                &lt;ul>
+                  &lt;li>&lt;a href="#">Inicio&lt;/a>&lt;/li>
+                  &lt;li>&lt;a href="#">Servicios&lt;/a>&lt;/li>
+                  &lt;li>&lt;a href="#">Galeria&lt;/a>&lt;/li>
+                  &lt;li>&lt;a href="#">Habitaciones&lt;/a>&lt;/li>
+                  &lt;li>&lt;a href="#">Contacto&lt;/a>&lt;/li>
+                &lt;/ul>
+
+                &lt;ul>
+                  &lt;li>&lt;a href="http://www.facebook.com">Facebook&lt;/a>&lt;/li>
+                  &lt;li>&lt;a href="http://www.twitter.com">Twitter&lt;/a>&lt;/li>
+                &lt;/ul>
+	        &lt;/nav>
+	    &lt;/header>
+
+
+    &lt;footer>
+        &lt;h4>Navegación&lt;/h4>
+        &lt;ul>
+          &lt;li>&lt;a href="#">Inicio&lt;/a>&lt;/li>
+          &lt;li>&lt;a href="#">Servicios&lt;/a>&lt;/li>
+          &lt;li>&lt;a href="#">Galeria&lt;/a>&lt;/li>
+          &lt;li>&lt;a href="#">Habitaciones&lt;/a>&lt;/li>
+          &lt;li>&lt;a href="#">Contacto&lt;/a>&lt;/li>
+        &lt;/ul>
+
+        &lt;div class="menu-social-footer">
+            &lt;ul>
+              &lt;li>&lt;a href="http://www.facebook.com">Facebook&lt;/a>&lt;/li>
+              &lt;li>&lt;a href="http://www.twitter.com">Twitter&lt;/a>&lt;/li>
+            &lt;/ul>
+        &lt;/div>
+    &lt;/footer>
+
+	</code></pre>
+	</article><!-- .movie -->
+
+	<article id="video-0502" class="video">
+	<h3 class="titulo">5.2 Agregando classes de Foundation y creando un Menú Responsive</h3>
+	<h4>En index.html </h4>
+	<pre><code class="language-markup">
+	    &lt;header class="contain-to-grid">
+        &lt;nav class="top-bar" data-topbar role="navigation">
+		    &lt;ul class="title-area">
+		        &lt;li class="name show-for-small">
+		            &lt;h1>&lt;a href="#">Navegación&lt;/a>&lt;/h1>
+		        &lt;/li>
+		        &lt;li class="toggle-topbar menu-icon">&lt;a href="#">&lt;span>Menu&lt;/span>&lt;/a>&lt;/li>
+		    &lt;/ul>
+
+          &lt;section class="top-bar-section">
+                &lt;ul class="left">
+                  &lt;li>&lt;a href="#">Inicio&lt;/a>&lt;/li>
+                  &lt;li>&lt;a href="#">Servicios&lt;/a>&lt;/li>
+                  &lt;li>&lt;a href="#">Galeria&lt;/a>&lt;/li>
+                  &lt;li>&lt;a href="#">Habitaciones&lt;/a>&lt;/li>
+                  &lt;li>&lt;a href="#">Contacto&lt;/a>&lt;/li>
+                &lt;/ul>
+
+                &lt;ul class="right">
+                  &lt;li>&lt;a href="http://www.facebook.com">Facebook&lt;/a>&lt;/li>
+                  &lt;li>&lt;a href="http://www.twitter.com">Twitter&lt;/a>&lt;/li>
+                &lt;/ul>
+            &lt;/section>  &lt;!--.top-bar-section-->
+        &lt;/nav>
+    &lt;/header> &lt;!--.contain-to-grid-->
+
+
+	</code></pre>
+	</article><!-- .movie -->
+
+
+	<article id="video-0503" class="video">
+	<h3 class="titulo">5.3 Creando un Dropdown a nuestro Menú</h3>
+	<h4>En index.html </h4>
+	<pre><code class="language-markup">
+    &lt;header class="contain-to-grid">
+        &lt;nav class="top-bar" data-topbar role="navigation">
+          &lt;ul class="title-area">
+            &lt;li class="name show-for-small">
+                &lt;h1>&lt;a href="#">Navegación&lt;/a>&lt;/h1>
+            &lt;/li>
+            &lt;li class="toggle-topbar menu-icon">&lt;a href="#">&lt;span>Menu&lt;/span>&lt;/a>&lt;/li>
+          &lt;/ul>
+          &lt;section class="top-bar-section">
+                &lt;ul class="left">
+                  &lt;li>&lt;a href="#">Inicio&lt;/a>&lt;/li>
+                  &lt;li>&lt;a href="#">Servicios&lt;/a>&lt;/li>
+                  &lt;li>&lt;a href="#">Galeria&lt;/a>&lt;/li>
+                  &lt;li class="has-dropdown">
+                    &lt;a href="#">Habitaciones&lt;/a>
+                    &lt;ul class="dropdown">
+                        &lt;li>&lt;a href="habitacion01.html">Habitación 01&lt;/a>&lt;/li>
+                        &lt;li>&lt;a href="habitacion02.html">Habitación 02&lt;/a>&lt;/li>
+                        &lt;li>&lt;a href="habitacion03.html">Habitación 03&lt;/a>&lt;/li>
+                        &lt;li>&lt;a href="habitacion04.html">Habitación 04&lt;/a>&lt;/li>
+                        &lt;li>&lt;a href="habitacion05.html">Habitación 05&lt;/a>&lt;/li>
+                        &lt;li>&lt;a href="habitacion06.html">Habitación 06&lt;/a>&lt;/li>
+                    &lt;/ul>
+                  &lt;/li>
+                  &lt;li>&lt;a href="#">Contacto&lt;/a>&lt;/li>
+                &lt;/ul>
+
+                &lt;ul class="right">
+                  &lt;li>&lt;a href="http://www.facebook.com">Facebook&lt;/a>&lt;/li>
+                  &lt;li>&lt;a href="http://www.twitter.com">Twitter&lt;/a>&lt;/li>
+                &lt;/ul>
+            &lt;/section>  &lt;!--.top-bar-section-->
+        &lt;/nav>
+    &lt;/header> &lt;!--.contain-to-grid-->
+
+
+	</code></pre>
+	</article><!-- .movie -->
+
+
+	<article id="video-0504" class="video">
+	<h3 class="titulo">5.4 Agregando Logotipo a sitio web</h3>
+	<h4>En index.html </h4>
+	<pre><code class="language-markup">
+     &lt;div class="row logo">
+        &lt;div class="large-6 large-offset-3 columns text-center">
+             &lt;img src="img/logo.svg" alt="logo hotel">
+        &lt;/div>
+    &lt;/div>&lt;!--.logo-->
+	</code></pre>
+	</article><!-- .movie -->
+
+	<article id="video-0505" class="video">
+	<h3 class="titulo">5.5 Finalizando el Footer</h3>
+	<h4>En index.html </h4>
+	<pre><code class="language-markup">
+    &lt;footer>
+      &lt;div class="row">
+        &lt;div class="large-2 columns large-offset-2">
+            &lt;h4>Navegación&lt;/h4>
+            &lt;ul class="side-nav">
+              &lt;li>&lt;a href="#">Inicio&lt;/a>&lt;/li>
+              &lt;li>&lt;a href="#">Servicios&lt;/a>&lt;/li>
+              &lt;li>&lt;a href="#">Galeria&lt;/a>&lt;/li>
+              &lt;li>&lt;a href="#">Habitaciones&lt;/a>&lt;/li>
+              &lt;li>&lt;a href="#">Contacto&lt;/a>&lt;/li>
+            &lt;/ul>
+        &lt;/div>&lt;!--.large-2-->
+        &lt;div class="large-4  columns">
+          &lt;p>Suscríbete a nuestro newsletter y recibe las ultimas promociones&lt;/p>
+          &lt;input type="text" placeholder="Tu email">
+            &lt;div class="menu-social-footer">
+                &lt;ul>
+                  &lt;li>&lt;a href="http://www.facebook.com">Facebook&lt;/a>&lt;/li>
+                  &lt;li>&lt;a href="http://www.twitter.com">Twitter&lt;/a>&lt;/li>
+                &lt;/ul>
+            &lt;/div>
+        &lt;/div> &lt;!--.large-4-->
+      &lt;/div> &lt;!--.row-->
+      &lt;p class="text-center">todos los derechos reservados&lt;/p>
+    &lt;/footer>
+	</code></pre>
+	</article><!-- .movie -->
+
+
+	<article id="video-0506" class="video">
+	<h3 class="titulo">5.6 Enlazando páginas desde Menú</h3>
+	<h4>En index.html (dentro de las 2 ul de &lt;footer> y &lt;header> ) </h4>
+	<pre><code class="language-markup">
+      &lt;li>&lt;a href="index.html">Inicio&lt;/a>&lt;/li>
+      &lt;li>&lt;a href="servicios.html">Servicios&lt;/a>&lt;/li>
+      &lt;li>&lt;a href="galeria.html">Galeria&lt;/a>&lt;/li>
+      &lt;li>&lt;a href="habitaciones.html">Habitaciones&lt;/a>&lt;/li>
+      &lt;li>&lt;a href="contacto.html">Contacto&lt;/a>&lt;/li>
+	</code></pre>
+
+
+	<h4>Entre Header y Footer </h4>
+	<pre><code class="language-markup">
+	&lt;section class="contenido-principal">
+
+	&lt;/section>
+	</code></pre>
+
+	</article><!-- .movie -->
+</section>
+
+<section id="capitulo-06" class="chapter">
+<h2 class="chapter-title">Capitulo 6: Creando nuestra página Principal</h2>
+	<article id="video-0601" class="video">
+	<h3 class="titulo">6.1 Mostrando imagenes para distintos tamaños</h3>
+	<h4>No hay Snippets para este video </h4>
+
+	</article><!-- .movie -->
+
+	<article id="video-0602" class="video">
+	<h3 class="titulo">6.2 HTML para nuestro Slider</h3>
+	<h4>En index.html</h4>
+	<pre><code class="language-markup">
+    &lt;div class="slider">
+      &lt;ul>
+            &lt;li>
+                &lt;img src="img/hotel-imagenes/slider/imagen01.jpg" alt="slide 1" />
+            &lt;/li>
+            &lt;li>
+                &lt;img src="img/hotel-imagenes/slider/imagen02.jpg" alt="slide 2" />
+            &lt;/li>
+            &lt;li>
+                &lt;img src="img/hotel-imagenes/slider/imagen03.jpg" alt="slide 3" />
+            &lt;/li>
+            &lt;li>
+                &lt;img src="img/hotel-imagenes/slider/imagen04.jpg" alt="slide 4" />
+            &lt;/li>
+            &lt;li>
+                &lt;img src="img/hotel-imagenes/slider/imagen05.jpg" alt="slide 5" />
+            &lt;/li>
+        &lt;/ul>
+    &lt;/div>
+	</code></pre>
+	</article><!-- .movie -->
+
+
+	<article id="video-0603" class="video">
+	<h3 class="titulo">6.3 Agregando clases para Orbit Slider</h3>
+	<h4>En index.html</h4>
+	<pre><code class="language-markup">
+    &lt;div class="slider">
+      &lt;ul class="orbit" data-orbit>
+            &lt;li>
+                &lt;img src="img/hotel-imagenes/slider/imagen01.jpg" alt="slide 1" />
+                &lt;div class="orbit-caption">
+                  En nuestro hotel te sentirás como en casa
+               &lt;/div>
+            &lt;/li>
+            &lt;li class="active">
+                 &lt;img src="img/hotel-imagenes/slider/imagen02.jpg" alt="slide 2" />
+                &lt;div class="orbit-caption">
+                  En nuestro hotel te sentirás como en casa
+                &lt;/div>
+            &lt;/li>
+            &lt;li>
+                 &lt;img src="img/hotel-imagenes/slider/imagen03.jpg" alt="slide 3" />
+                &lt;div class="orbit-caption">
+                  En nuestro hotel te sentirás como en casa
+                &lt;/div>
+            &lt;/li>
+            &lt;li>
+                 &lt;img src="img/hotel-imagenes/slider/imagen04.jpg" alt="slide 4" />
+                &lt;div class="orbit-caption">
+                  En nuestro hotel te sentirás como en casa
+                &lt;/div>
+            &lt;/li>
+            &lt;li>
+                 &lt;img src="img/hotel-imagenes/slider/imagen05.jpg" alt="slide 5" />
+                &lt;div class="orbit-caption">
+                  En nuestro hotel te sentirás como en casa
+                &lt;/div>
+            &lt;/li>
+        &lt;/ul>
+    &lt;/div> &lt;!-- .slider -->
+	</code></pre>
+	</article><!-- .movie -->
+
+	<article id="video-0604" class="video">
+	<h3 class="titulo">6.4 Trabajando con Paneles y Grid en Foundation</h3>
+	<h4>En index.html</h4>
+	<pre><code class="language-markup">
+      &lt;section class="contenido-principal">
+        &lt;div class="row">
+	          &lt;h2 class="text-center">Nuestras Habitaciones&lt;/h2>
+
+	          &lt;div class="large-4 medium-6 columns">
+	              &lt;img src="img/hotel-imagenes/default/habitaciones/habitacion01.jpg">
+	              &lt;div class="panel">
+	                    &lt;h3 class="text-center">Habitación 01&lt;/h3>
+	              &lt;/div>
+	          &lt;/div> &lt;!--.large-4 -->
+	          &lt;div class="large-4 medium-6 columns">
+	              &lt;img src="img/hotel-imagenes/default/habitaciones/habitacion02.jpg">
+	              &lt;div class="panel">
+	                    &lt;h3 class="text-center">Habitación 02&lt;/h3>
+	              &lt;/div>
+	          &lt;/div> &lt;!--.large-4 -->
+	          &lt;div class="large-4 medium-6 columns">
+	              &lt;img src="img/hotel-imagenes/default/habitaciones/habitacion03.jpg">
+	              &lt;div class="panel">
+	                    &lt;h3 class="text-center">Habitación 03&lt;/h3>
+	              &lt;/div>
+	          &lt;/div> &lt;!--.large-4 -->
+	          &lt;a href="habitaciones.html" class="button right">ver todas&lt;/a>
+          &lt;/div>  &lt;!--.row-->
+      &lt;/section>&lt;!--.contenido-principal-->
+	</code></pre>
+	</article><!-- .movie -->
+
+	<article id="video-0605" class="video">
+	<h3 class="titulo">6.5 Finalizando nuestro Homepage y creando una galeria con Block Grid</h3>
+	<h4>En index.html</h4>
+	<pre><code class="language-markup">
+      &lt;section class="contenido-inferior">
+              &lt;div class="row">
+	                &lt;div class="large-8 columns">
+	                    &lt;h2 class="text-center">Sobre Nosotros&lt;/h2>
+	                    &lt;p>Vestibulum ullamcorper dolor risus. Curabitur sed suscipit ex, nec malesuada odio. Aenean et tortor vitae est iaculis malesuada et sit amet orci. Morbi non mi ut mi vehicula laoreet. Mauris non mauris vitae dolor accumsan placerat. Fusce vitae augue est. Aenean ut tellus in justo imperdiet aliquet. Etiam iaculis tellus sed euismod commodo. Duis aliquam congue posuere. Curabitur sed ex nisi. Duis vehicula placerat lectus at dapibus. Proin convallis leo eu diam finibus, id sodales sapien finibus.&lt;/p>
+	                &lt;/div>
+	                &lt;div class="large-4 columns">
+	                    &lt;h2 class="text-center">Galeria&lt;/h2>
+	                    &lt;ul class="large-block-grid-2 medium-block-grid-4 small-block-grid-3">
+	                        &lt;li>&lt;img src="img/hotel-imagenes/thumbs/galeria/galeria01.jpg">&lt;/li>
+	                        &lt;li>&lt;img src="img/hotel-imagenes/thumbs/galeria/galeria02.jpg">&lt;/li>
+	                        &lt;li>&lt;img src="img/hotel-imagenes/thumbs/galeria/galeria03.jpg">&lt;/li>
+	                        &lt;li>&lt;img src="img/hotel-imagenes/thumbs/galeria/galeria04.jpg">&lt;/li>
+	                        &lt;li>&lt;img src="img/hotel-imagenes/thumbs/galeria/galeria05.jpg">&lt;/li>
+	                        &lt;li>&lt;img src="img/hotel-imagenes/thumbs/galeria/galeria06.jpg">&lt;/li>
+	                        &lt;li>&lt;img src="img/hotel-imagenes/thumbs/galeria/galeria07.jpg">&lt;/li>
+	                        &lt;li>&lt;img src="img/hotel-imagenes/thumbs/galeria/galeria08.jpg">&lt;/li>
+	                    &lt;/ul>
+	                &lt;/div>
+              &lt;/div> &lt;!--.row-->
+      &lt;/section>&lt;!--.contenido-inferior-->
+	</code></pre>
+	</article><!-- .movie -->
+
+
+</section>
+
+<section id="capitulo-07" class="chapter">
+<h2 class="chapter-title">Capitulo 7: Creando las páginas interiores</h2>
+
+	<article id="video-0701" class="video">
+	<h3 class="titulo">7.1 Creando la sección de Servicios con classes de Foundation</h3>
+	<h4>En servicios.html</h4>
+	<pre><code class="language-markup">
+      &lt;section class="contenido-principal">
+          &lt;div class="row servicio">
+              &lt;div class="medium-6 columns">
+                    &lt;img src="img/hotel-imagenes/large/servicios/servicio01.jpg">
+              &lt;/div>
+              &lt;div class="medium-6 columns">
+                  &lt;h2 class="text-center">Área de Descanso&lt;/h2>
+                  &lt;p class="medium-text-left small-only-text-center">Fusce at mauris id quam pharetra mattis non a augue. Suspendisse dignissim dapibus turpis, eu mollis velit ultricies non. &lt;/p>
+              &lt;/div>
+          &lt;/div> &lt;!--.servicio-->
+
+          &lt;div class="row servicio">
+              &lt;div class="medium-6 columns">
+                    &lt;img src="img/hotel-imagenes/large/servicios/servicio02.jpg">
+              &lt;/div>
+              &lt;div class="medium-6 columns">
+                  &lt;h2 class="text-center">Alberca&lt;/h2>
+                  &lt;p class="medium-text-right small-only-text-center">Fusce at mauris id quam pharetra mattis non a augue. Suspendisse dignissim dapibus turpis, eu mollis velit ultricies non. &lt;/p>
+              &lt;/div>
+          &lt;/div> &lt;!--.servicio-->
+
+          &lt;div class="row servicio">
+              &lt;div class="medium-6 columns">
+                    &lt;img src="img/hotel-imagenes/large/servicios/servicio03.jpg">
+              &lt;/div>
+              &lt;div class="medium-6 columns">
+                  &lt;h2 class="text-center">Restaurant & Bar&lt;/h2>
+                  &lt;p  class="medium-text-left small-only-text-center">Fusce at mauris id quam pharetra mattis non a augue. Suspendisse dignissim dapibus turpis, eu mollis velit ultricies non. &lt;/p>
+              &lt;/div>
+          &lt;/div> &lt;!--.servicio-->
+
+          &lt;div class="row servicio">
+              &lt;div class="medium-6 columns">
+                    &lt;img src="img/hotel-imagenes/large/servicios/servicio04.jpg">
+              &lt;/div>
+              &lt;div class="medium-6 columns">
+                  &lt;h2 class="text-center">Todo Incluido&lt;/h2>
+                  &lt;p class="medium-text-right small-only-text-center">Fusce at mauris id quam pharetra mattis non a augue. Suspendisse dignissim dapibus turpis, eu mollis velit ultricies non. &lt;/p>
+              &lt;/div>
+          &lt;/div>
+      &lt;/section>  &lt;!--.contenido-principal-->
+	</code></pre>
+	</article><!-- .movie -->
+
+	<article id="video-0702" class="video">
+	<h3 class="titulo">7.2 Utilizando Push y Pull Columns</h3>
+	<h4>En servicios.html</h4>
+	<pre><code class="language-markup">
+      &lt;section class="contenido-principal">
+          &lt;div class="row servicio">
+              &lt;div class="medium-6 columns">
+                    &lt;img src="img/hotel-imagenes/large/servicios/servicio01.jpg">
+              &lt;/div>
+              &lt;div class="medium-6 columns">
+                  &lt;h2 class="text-center">Área de Descanso&lt;/h2>
+                  &lt;p class="medium-text-left small-only-text-center">Fusce at mauris id quam pharetra mattis non a augue. Suspendisse dignissim dapibus turpis, eu mollis velit ultricies non. &lt;/p>
+              &lt;/div>
+          &lt;/div> &lt;!--.servicio-->
+
+          &lt;div class="row servicio">
+              &lt;div class="medium-6 medium-push-6 columns">
+                    &lt;img src="img/hotel-imagenes/large/servicios/servicio02.jpg">
+              &lt;/div>
+              &lt;div class="medium-6 medium-pull-6 columns">
+                  &lt;h2 class="text-center">Alberca&lt;/h2>
+                  &lt;p class="medium-text-right small-only-text-center">Fusce at mauris id quam pharetra mattis non a augue. Suspendisse dignissim dapibus turpis, eu mollis velit ultricies non. &lt;/p>
+              &lt;/div>
+          &lt;/div> &lt;!--.servicio-->
+
+          &lt;div class="row servicio">
+              &lt;div class="medium-6 columns">
+                    &lt;img src="img/hotel-imagenes/large/servicios/servicio03.jpg">
+              &lt;/div>
+              &lt;div class="medium-6 columns">
+                  &lt;h2 class="text-center">Restaurant & Bar&lt;/h2>
+                  &lt;p  class="medium-text-left small-only-text-center">Fusce at mauris id quam pharetra mattis non a augue. Suspendisse dignissim dapibus turpis, eu mollis velit ultricies non. &lt;/p>
+              &lt;/div>
+          &lt;/div> &lt;!--.servicio-->
+
+          &lt;div class="row servicio">
+              &lt;div class="medium-6 medium-push-6 columns">
+                    &lt;img src="img/hotel-imagenes/large/servicios/servicio04.jpg">
+              &lt;/div>
+              &lt;div class="medium-6 medium-pull-6 columns">
+                  &lt;h2 class="text-center">Todo Incluido&lt;/h2>
+                  &lt;p class="medium-text-right small-only-text-center">Fusce at mauris id quam pharetra mattis non a augue. Suspendisse dignissim dapibus turpis, eu mollis velit ultricies non. &lt;/p>
+              &lt;/div>
+          &lt;/div>
+      &lt;/section>  &lt;!--.contenido-principal-->
+	</code></pre>
+	</article><!-- .movie -->
+
+
+	<article id="video-0703" class="video">
+	<h3 class="titulo">7.3 Agregando una imagen Destacada</h3>
+	<h4>En servicios.html</h4>
+	<pre><code class="language-markup">
+        &lt;div class="row small-collapse imagen-destacada">
+            &lt;div class="columns">
+                &lt;img src="img/hotel-imagenes/destacadas/large/servicios.jpg">
+                &lt;div class="texto-destacada">
+                    &lt;p>Servicios que te harán sentir como en casa&lt;/p>
+                &lt;/div> &lt;!-- texto-destacada -->
+            &lt;/div> &lt;!--.columns-->
+        &lt;/div> <!--.imagen-destacada-->
+	</code></pre>
+	<h4> Una vez finalizado esto, copia a todas las otras páginas interiores</h4>
+	</article><!-- .movie -->
+
+	<article id="video-0704" class="video">
+	<h3 class="titulo">7.4 Introduciendo Data Interchange para imagenes</h3>
+	<h4>En servicios.html reemplaza la etiqueta de imagen y agrega lo siguiente:</h4>
+	<pre><code class="language-markup">
+    &lt;img data-interchange="[img/hotel-imagenes/destacadas/small/servicios.jpg, (small)],
+           [img/hotel-imagenes/destacadas/medium/servicios.jpg, (medium)],
+           [img/hotel-imagenes/destacadas/large/servicios.jpg, (large)] ">
+	</code></pre>
+	<h4> Una vez finalizado esto, copia a todas las otras páginas interiores</h4>
+	</article><!-- .movie -->
+
+	<article id="video-0705" class="video">
+	<h3 class="titulo">7.5 Data Interchange para Habitaciones en Index y Servicios</h3>
+    <h4>En servicios.html busca la etiqueta reemplaza una a una las siguientes.</h4>
+    <pre><code class="language-markup">
+              &lt;img data-interchange="[img/hotel-imagenes/small/servicios/servicio01.jpg, (small)],
+                                     [img/hotel-imagenes/medium/servicios/servicio01.jpg, (medium)],
+                                     [img/hotel-imagenes/large/servicios/servicio01.jpg, (large)]">
+
+
+              &lt;img data-interchange="[img/hotel-imagenes/small/servicios/servicio02.jpg, (small)],
+                                     [img/hotel-imagenes/medium/servicios/servicio02.jpg, (medium)],
+                                     [img/hotel-imagenes/large/servicios/servicio02.jpg, (large)]">
+
+              &lt;img data-interchange="[img/hotel-imagenes/small/servicios/servicio02.jpg, (small)],
+                                     [img/hotel-imagenes/medium/servicios/servicio02.jpg, (medium)],
+                                     [img/hotel-imagenes/large/servicios/servicio02.jpg, (large)]">
+
+              &lt;img data-interchange="[img/hotel-imagenes/small/servicios/servicio03.jpg, (small)],
+                                     [img/hotel-imagenes/medium/servicios/servicio03.jpg, (medium)],
+                                     [img/hotel-imagenes/large/servicios/servicio03.jpg, (large)]">
+    </code></pre>
+
+	<h4>En index.html busca la etiqueta img en cada habitacion y reemplaza una a una las siguientes.</h4>
+	<pre><code class="language-markup">
+     &lt;img data-interchange="[img/hotel-imagenes/small/habitaciones/habitacion01.jpg, (small)],
+                                             [img/hotel-imagenes/medium/habitaciones/habitacion01.jpg, (medium)],
+                                             [img/hotel-imagenes/default/habitaciones/habitacion01.jpg, (large)] ">
+
+
+     &lt;img data-interchange="[img/hotel-imagenes/small/habitaciones/habitacion02.jpg, (small)],
+                                             [img/hotel-imagenes/medium/habitaciones/habitacion02.jpg, (medium)],
+                                             [img/hotel-imagenes/default/habitaciones/habitacion02.jpg, (large)] ">
+
+
+     &lt;img data-interchange="[img/hotel-imagenes/small/habitaciones/habitacion03.jpg, (small)],
+                                             [img/hotel-imagenes/medium/habitaciones/habitacion03.jpg, (medium)],
+                                             [img/hotel-imagenes/default/habitaciones/habitacion03.jpg, (large)] ">
+	</code></pre>
+	</article><!-- .movie -->
+
+	<article id="video-0706" class="video">
+	<h3 class="titulo">7.6 Creando una Galeria con ZURB Foundation</h3>
+	<h4>En galeria.html dentro de contenido-principal</h4>
+	<pre><code class="language-markup">
+    &lt;div class="row">
+      &lt;ul class="large-block-grid-3">
+            &lt;li>&lt;img src="img/hotel-imagenes/default/galeria/galeria01.jpg">&lt;/li>
+            &lt;li>&lt;img src="img/hotel-imagenes/default/galeria/galeria02.jpg">&lt;/li>
+            &lt;li>&lt;img src="img/hotel-imagenes/default/galeria/galeria03.jpg">&lt;/li>
+            &lt;li>&lt;img src="img/hotel-imagenes/default/galeria/galeria04.jpg">&lt;/li>
+            &lt;li>&lt;img src="img/hotel-imagenes/default/galeria/galeria05.jpg">&lt;/li>
+            &lt;li>&lt;img src="img/hotel-imagenes/default/galeria/galeria06.jpg">&lt;/li>
+            &lt;li>&lt;img src="img/hotel-imagenes/default/galeria/galeria07.jpg">&lt;/li>
+            &lt;li>&lt;img src="img/hotel-imagenes/default/galeria/galeria08.jpg">&lt;/li>
+      &lt;/ul>
+    &lt;/div>  &lt;!--.row-->
+	</code></pre>
+	</article><!-- .movie -->
+
+	<article id="video-0707" class="video">
+	<h3 class="titulo">7.7 Mostrando las imagenes con un Modal</h3>
+	<h4>En galeria.html la galeria debe quedar así:</h4>
+	<pre><code class="language-markup">
+    &lt;section class="contenido-principal">
+        &lt;div class="row">
+          &lt;ul class="clearing-thumbs large-block-grid-3" data-clearing>
+                &lt;li>
+                  &lt;a href="img/hotel-imagenes/large/galeria/galeria01.jpg">
+                        &lt;img src="img/hotel-imagenes/default/galeria/galeria01.jpg">
+                  &lt;/a>
+                &lt;/li>
+                &lt;li>
+                  &lt;a href="img/hotel-imagenes/large/galeria/galeria02.jpg">
+                      &lt;img src="img/hotel-imagenes/default/galeria/galeria02.jpg">
+                  &lt;/a>
+                &lt;/li>
+                &lt;li>
+                  &lt;a href="img/hotel-imagenes/large/galeria/galeria03.jpg">
+                      &lt;img src="img/hotel-imagenes/default/galeria/galeria03.jpg">
+                  &lt;/a>
+                &lt;/li>
+                &lt;li>
+                  &lt;a href="img/hotel-imagenes/large/galeria/galeria04.jpg">
+                      &lt;img src="img/hotel-imagenes/default/galeria/galeria04.jpg">
+                  &lt;/a>
+                &lt;/li>
+                &lt;li>
+                  &lt;a href="img/hotel-imagenes/large/galeria/galeria05.jpg">
+                      &lt;img src="img/hotel-imagenes/default/galeria/galeria05.jpg">
+                  &lt;/a>
+                &lt;/li>
+                &lt;li>
+                  &lt;a href="img/hotel-imagenes/large/galeria/galeria06.jpg">
+                      &lt;img src="img/hotel-imagenes/default/galeria/galeria06.jpg">
+                  &lt;/a>
+                &lt;/li>
+                &lt;li>
+                  &lt;a href="img/hotel-imagenes/large/galeria/galeria07.jpg">
+                     &lt;img src="img/hotel-imagenes/default/galeria/galeria07.jpg">
+                  &lt;/a>
+                &lt;/li>
+                &lt;li>
+                  &lt;a href="img/hotel-imagenes/large/galeria/galeria08.jpg">
+                       &lt;img src="img/hotel-imagenes/default/galeria/galeria08.jpg">
+                    &lt;/a>
+                &lt;/li>
+          &lt;/ul>
+        &lt;/div>
+      &lt;/section> &lt;!--.contenido-principal-->
+	</code></pre>
+	</article><!-- .movie -->
+
+
+	<article id="video-0708" class="video">
+	<h3 class="titulo">7.8 Creando la sección de Habitaciones</h3>
+	<h4>En habitaciones.html:</h4>
+	<pre><code class="language-markup">
+    &lt;section class="row contenido-principal">
+        &lt;div class="large-4 medium-6 columns">
+            &lt;img data-interchange="[img/hotel-imagenes/small/habitaciones/habitacion01.jpg, (small)],
+                                 [img/hotel-imagenes/medium/habitaciones/habitacion01.jpg, (medium)],
+                                 [img/hotel-imagenes/default/habitaciones/habitacion01.jpg, (large)] ">
+            &lt;div class="panel">
+                &lt;h3 class="text-center">
+                  &lt;a href="habitacion01.html">Habitación 01&lt;/a>
+                &lt;/h3>
+            &lt;/div>
+        &lt;/div> &lt;!--.large-4 -->
+
+        &lt;div class="large-4 medium-6 columns">
+            &lt;img data-interchange="[img/hotel-imagenes/small/habitaciones/habitacion02.jpg, (small)],
+                               [img/hotel-imagenes/medium/habitaciones/habitacion02.jpg, (medium)],
+                               [img/hotel-imagenes/default/habitaciones/habitacion02.jpg, (large)] ">
+            &lt;div class="panel">
+                &lt;h3 class="text-center">
+                  &lt;a href="habitacion02.html">Habitación 02&lt;/a>
+                &lt;/h3>
+            &lt;/div>
+        &lt;/div> &lt;!--.large-4 -->
+
+        &lt;div class="large-4 medium-6 columns">
+            &lt;img data-interchange="[img/hotel-imagenes/small/habitaciones/habitacion03.jpg, (small)],
+                                 [img/hotel-imagenes/medium/habitaciones/habitacion03.jpg, (medium)],
+                                 [img/hotel-imagenes/default/habitaciones/habitacion03.jpg, (large)] ">
+            &lt;div class="panel">
+                &lt;h3 class="text-center">
+                  &lt;a href="habitacion03.html">Habitación 03&lt;/a>
+                &lt;/h3>
+            &lt;/div>
+        &lt;/div> &lt;!--.large-4 -->
+
+      &lt;div class="large-4 medium-6 columns">
+          &lt;img data-interchange="[img/hotel-imagenes/small/habitaciones/habitacion04.jpg, (small)],
+                                 [img/hotel-imagenes/medium/habitaciones/habitacion04.jpg, (medium)],
+                                 [img/hotel-imagenes/default/habitaciones/habitacion04.jpg, (large)] ">
+            &lt;div class="panel">
+                &lt;h3 class="text-center">
+                  &lt;a href="habitacion04.html">Habitación 04&lt;/a>
+                &lt;/h3>
+            &lt;/div>
+      &lt;/div> &lt;!--.large-4 -->
+
+      &lt;div class="large-4 medium-6 columns">
+          &lt;img data-interchange="[img/hotel-imagenes/small/habitaciones/habitacion05.jpg, (small)],
+                               [img/hotel-imagenes/medium/habitaciones/habitacion05.jpg, (medium)],
+                               [img/hotel-imagenes/default/habitaciones/habitacion05.jpg, (large)] ">
+            &lt;div class="panel">
+                &lt;h3 class="text-center">
+                  &lt;a href="habitacion05.html">Habitación 05&lt;/a>
+                &lt;/h3>
+            &lt;/div>
+        &lt;/div> &lt;!--.large-4 -->
+
+        &lt;div class="large-4 medium-6 columns">
+          &lt;img data-interchange="[img/hotel-imagenes/small/habitaciones/habitacion06.jpg, (small)],
+                                 [img/hotel-imagenes/medium/habitaciones/habitacion06.jpg, (medium)],
+                                 [img/hotel-imagenes/default/habitaciones/habitacion06.jpg, (large)] ">
+            &lt;div class="panel">
+                &lt;h3 class="text-center">
+                  &lt;a href="habitacion06.html">Habitación 06&lt;/a>
+                &lt;/h3>
+            &lt;/div>
+        &lt;/div> &lt;!--.large-4 -->
+    &lt;/section>&lt;!--.contenido-principal -->
+	</code></pre>
+	</article><!-- .movie -->
+
+
+	<article id="video-0709" class="video">
+	<h3 class="titulo">7.9 Agregando un Accordion para Habitaciones</h3>
+	<h4>En habitacion01.html:</h4>
+	<pre><code class="language-markup">
+    &lt;section class="contenido-principal">
+        &lt;div class="row">
+            &lt;div class="medium-8 columns">
+                &lt;h2 class="text-center">Más información&lt;/h2>
+
+                &lt;ul class="accordion" data-accordion>
+                    &lt;li class="accordion-navigation">
+                        &lt;a href="#general" class="text-center">Información General&lt;/a>
+                        &lt;div id="general" class="content active text-justify">
+                            Donec ut leo cursus, cursus lorem in, bibendum augue. Donec ac luctus magna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec eget lacus et elit varius tristique at ac ligula. Cras egestas semper nibh eu pretium. Suspendisse potenti. Fusce at mauris id quam pharetra mattis non a augue. Suspendisse dignissim dapibus turpis, eu mollis velit ultricies non.
+                            Fusce at mauris id quam pharetra mattis non a augue. Suspendisse dignissim dapibus turpis, eu mollis velit ultricies non.
+                        &lt;/div>
+                    &lt;/li>
+                    &lt;li class="accordion-navigation">
+                        &lt;a href="#incluido" class="text-center">¿Qué Incluye?&lt;/a>
+                        &lt;div id="incluido" class="content text-justify">
+                            Donec ut leo cursus, cursus lorem in, bibendum augue. Donec ac luctus magna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec eget lacus et elit varius tristique at ac ligula. Cras egestas semper nibh eu pretium. Suspendisse potenti. Fusce at mauris id quam pharetra mattis non a augue. Suspendisse dignissim dapibus turpis, eu mollis velit ultricies non.
+                            Fusce at mauris id quam pharetra mattis non a augue. Suspendisse dignissim dapibus turpis, eu mollis velit ultricies non.
+                        &lt;/div>
+                    &lt;/li>
+                    &lt;li class="accordion-navigation">
+                        &lt;a href="#check" class="text-center">Horario de Check In y Check Out&lt;/a>
+                        &lt;div id="check" class="content text-justify">
+                            Donec ut leo cursus, cursus lorem in, bibendum augue. Donec ac luctus magna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec eget lacus et elit varius tristique at ac ligula. Cras egestas semper nibh eu pretium. Suspendisse potenti. Fusce at mauris id quam pharetra mattis non a augue. Suspendisse dignissim dapibus turpis, eu mollis velit ultricies non.
+                            Fusce at mauris id quam pharetra mattis non a augue. Suspendisse dignissim dapibus turpis, eu mollis velit ultricies non.
+                        &lt;/div>
+                    &lt;/li>
+                &lt;/ul>
+            &lt;/div> &lt;!--.medium-8 -->
+        &lt;/div>
+    &lt;/section> <!--.contenido-principal-->
+	</code></pre>
+	</article><!-- .movie -->
+
+
+	<article id="video-0710" class="video">
+	<h3 class="titulo">7.10 Construyendo una Galeria para Habitaciones</h3>
+	<h4>En habitacion01.html después del cierre de medium-8 </h4>
+	<pre><code class="language-markup">
+    &lt;div class="medium-4 columns">
+        &lt;h2 class="text-center">Galeria&lt;/h2>
+
+        &lt;ul class="clearing-thumbs medium-block-grid-2 small-block-grid-3" data-clearing>
+            &lt;li>
+              &lt;a href="img/hotel-imagenes/large/galeria/galeria01.jpg">
+                 &lt;img src="img/hotel-imagenes/default/galeria/galeria01.jpg" alt="">
+               &lt;/a>
+             &lt;/li>
+             &lt;li>
+              &lt;a href="img/hotel-imagenes/large/galeria/galeria02.jpg">
+                 &lt;img src="img/hotel-imagenes/default/galeria/galeria02.jpg" alt="">
+               &lt;/a>
+             &lt;/li>
+             &lt;li>
+              &lt;a href="img/hotel-imagenes/large/galeria/galeria03.jpg">
+                 &lt;img src="img/hotel-imagenes/default/galeria/galeria03.jpg" alt="">
+               &lt;/a>
+             &lt;/li>
+             &lt;li>
+              &lt;a href="img/hotel-imagenes/large/galeria/galeria04.jpg">
+                 &lt;img src="img/hotel-imagenes/default/galeria/galeria04.jpg" alt="">
+               &lt;/a>
+             &lt;/li>
+             &lt;li>
+              &lt;a href="img/hotel-imagenes/large/galeria/galeria05.jpg">
+                 &lt;img src="img/hotel-imagenes/default/galeria/galeria05.jpg" alt="">
+               &lt;/a>
+             &lt;/li>
+        &lt;/ul> &lt;!--.clearing-thumbs -->
+    &lt;/div> &lt;!--.medium-4 -->
+	</code></pre>
+	</article><!-- .movie -->
+
+	<article id="video-0711" class="video">
+	<h3 class="titulo">7.11 Construyendo un Formulario de Contacto para Habitaciones</h3>
+	<h4>En habitacion01.html antes del cierre de &lt;!--.div --> &lt;!--.medium-4 --> </h4>
+	<pre><code class="language-markup">
+    &lt;div class="formulario-contacto">
+	      &lt;form action="#">
+	        &lt;fieldset>
+	          &lt;legend>Reservación&lt;/legend>
+                &lt;div class="row">
+                    &lt;div class="medium-4 columns">
+                          &lt;label for="nombre" class="inline">Nombre:&lt;/label>
+                    &lt;/div>
+                    &lt;div class="medium-8 columns">
+                        &lt;input type="text" id="nombre" placeholder="tu nombre">
+                    &lt;/div>
+                &lt;/div>  &lt;!-- .row (fin de campo)-->
+
+                &lt;div class="row">
+                    &lt;div class="medium-4 columns">
+                          &lt;label for="email" class="inline">Email:&lt;/label>
+                    &lt;/div>
+                    &lt;div class="medium-8 columns">
+                        &lt;input type="text" id="email" placeholder="tu email">
+                    &lt;/div>
+                &lt;/div>  &lt;!-- .row (fin de campo)-->
+
+                &lt;div class="row">
+                    &lt;div class="medium-4 columns">
+                          &lt;label for="mensaje" class="inline">Mensaje:&lt;/label>
+                    &lt;/div>
+                &lt;/div>  &lt;!-- .row (fin de campo)-->
+
+                &lt;div class="row">
+                    &lt;div class="medium-12 columns">
+                         &lt;textarea name="mensaje" id="mensaje" placeholder="tu mensaje">&lt;/textarea>
+                    &lt;/div>
+                &lt;/div>  &lt;!-- .row (fin de campo)-->
+
+                &lt;div class="row">
+                      &lt;input type="submit" class="button" value="enviar">
+                &lt;/div>   &lt;!-- .row (fin de campo)-->
+	        &lt;/fieldset>
+	    &lt;/form>
+    &lt;/div> &lt;!--.formulario-contacto-->
+	</code></pre>
+	<h4>Despues de esto podrás copiar todo el HTML a las distintas habitaciones y cambiar el número en imagenes y titulo</h4>
+	</article><!-- .movie -->
+
+
+
+	<article id="video-0712" class="video">
+	<h3 class="titulo">7.12 Construyendo un Formulario de Contacto para Contacto</h3>
+	<h4>En contacto.html: </h4>
+	<pre><code class="language-markup">
+  &lt;section class="contenido-principal">
+    &lt;div class="row">
+          &lt;div class="large-8 columns large-offset-2">
+            &lt;form action="#">
+                &lt;fieldset>
+                  &lt;legend>Por favor llena el formulario de Contacto&lt;/legend>
+                      &lt;div class="row">
+                          &lt;div class="medium-12 columns">
+                                &lt;label for="nombre">Nombre:
+                                    &lt;input type="text" id="nombre" placeholder="tu nombre">
+                                &lt;/label>
+                          &lt;/div>
+                      &lt;/div>  &lt;!-- .row (fin del campo)-->
+
+                      &lt;div class="row">
+                          &lt;div class="medium-12 columns">
+                                &lt;label for="ciudad">Ciudad:
+                                    &lt;input type="text" id="ciudad" placeholder="tu ciudad">
+                                &lt;/label>
+                          &lt;/div>
+                      &lt;/div>  &lt;!-- .row (fin del campo)-->
+
+                      &lt;div class="row">
+                          &lt;div class="medium-12 columns">
+                                &lt;label for="email">E-mail:
+                                    &lt;input type="text" id="email" placeholder="tu email">
+                                &lt;/label>
+                          &lt;/div>
+                      &lt;/div>  &lt;!-- .row (fin del campo)-->
+
+                      &lt;div class="row">
+                          &lt;div class="medium-12 columns">
+                                &lt;label for="telefono">Teléfono:
+                                    &lt;input type="text" id="telefono" placeholder="tu telefono">
+                                &lt;/label>
+                          &lt;/div>
+                      &lt;/div>  &lt;!-- .row (fin del campo)-->
+
+                      &lt;div class="row">
+                          &lt;div class="medium-12 columns">
+                                &lt;label for="phone">mensaje:
+                                    &lt;textarea placeholder="tu mensaje">&lt;/textarea>
+                                &lt;/label>
+                          &lt;/div>
+                      &lt;/div>  &lt;!-- .row (fin del campo)-->
+
+                      &lt;div class="row">
+                          &lt;div class="medium-12 columns">
+                                &lt;input type="submit" class="button" value="Enviar">
+                          &lt;/div>
+                      &lt;/div>
+                &lt;/fieldset>
+            &lt;/form>
+        &lt;/div>
+    &lt;/div>
+  &lt;/section>  &lt;!-- .contenido-principal -->
+	</code></pre>
+	</article><!-- .movie -->
+
+<section id="capitulo-08" class="chapter">
+<h2 class="chapter-title">Capitulo 8: Comenzando a trabajar con SASS</h2>
+
+	<article id="video-0801" class="video">
+	<h3 class="titulo">8.1 Creando un archivo Custom</h3>
+	<h4>En scss/app.scss: descomentar</h4>
+	<pre><code class="language-sass">
+    @import
+	</code></pre>
+	<h4>y agregar al final:</h4>
+	<pre><code class="language-sass">
+    "custom"
+	</code></pre>
+	</article><!-- .movie -->
+
+	<article id="video-0802" class="video">
+	<h3 class="titulo">8.2 Asignando colores primarios y trabajando con TopBar</h3>
+	<h4>En scss/_settings.scss: </h4>
+	<h4>Linea 119 y 120</h4>
+	<pre><code class="language-sass">
+   $primary-color: #0068ba;
+   $secondary-color: #ff3535;
+	</code></pre>
+	<h4>Linea 1403 y 1404</h4>
+    <pre><code class="language-sass">
+	 $topbar-bg-color: $primary-color;
+	 $topbar-bg: $topbar-bg-color;
+	</code></pre>
+	</article><!-- .movie -->
+
+	<article id="video-0803" class="video">
+	<h3 class="titulo">8.3 Editando SASS de Drop Down y Top Bar</h3>
+	<h4>En scss/_settings.scss: </h4>
+	<h4>Alrededor de la linea 1400 descomentar y cambiar los siguientes valores:</h4>
+	<pre><code class="language-sass">
+    $topbar-height: rem-calc(55);
+
+
+    $topbar-link-font-size: rem-calc(16);
+    $topbar-link-bg-hover: $secondary-color;
+    $topbar-link-text-transform: uppercase;
+
+    $topbar-dropdown-bg: $secondary-color;
+    $topbar-dropdown-link-bg: $darkblue;
+    $topbar-dropdown-link-bg-hover: $secondary-color;
+	</code></pre>
+
+	<h4>Antes de probar en la linea 117 agregar:</h4>
+	<pre><code class="language-sass">
+		$darkblue    : #003865;
+	</code></pre>
+	</article><!-- .movie -->
+
+
+	<article id="video-0804" class="video">
+	<h3 class="titulo">8.4 ¿Qué es la función rem-calc?</h3>
+	<h4>No hay Snippets para este video</h4>
+
+	</article><!-- .movie -->
+
+	<article id="video-0805" class="video">
+	<h3 class="titulo">8.5 Cambiando el SCSS de Orbit Slider</h3>
+    <h4>En custom.scss: </h4>
+    <pre><code class="language-sass">
+    .logo {
+        margin-top:rem-calc(30);
+        margin-bottom:rem-calc(30);
+    }
+    </code></pre>
+	<h4>En scss/_settings.scss: </h4>
+	<h4>Alrededor de la linea 915 descomentar y cambiar los siguientes valores:</h4>
+	<pre><code class="language-sass">
+   $orbit-caption-bg: $primary-color;
+   $orbit-caption-font-size: rem-calc(20);
+	</code></pre>
+
+	<h4>Alrededor de la linea 934 descomentar y cambiar los siguientes valores:</h4>
+	<pre><code class="language-sass">
+   $orbit-bullet-nav-color-active: $primary-color;
+   $orbit-bullet-radius: rem-calc(20);
+	</code></pre>
+	</article><!-- .movie -->
+
+	<article id="video-0806" class="video">
+	<h3 class="titulo">8.6 Agregando Estilos titulos</h3>
+	<h4>En scss/_settings.scss: </h4>
+	<h4>Alrededor de la linea 226 descomentar y cambiar los siguientes valores:</h4>
+	<pre><code class="language-sass">
+    $h2-font-size: rem-calc(30);
+	</code></pre>
+	<h4>En custom.scss agregar: </h4>
+	<pre><code class="language-sass">
+	h2 {
+		color:$primary-color;
+		text-transform:uppercase;
+		margin: rem-calc(0 0 30 0);
+	}
+	h2:after {
+		content:" ";
+		display:block;
+		background-color:$primary-color;
+		width:rem-calc(55);
+		height:rem-calc(6);
+		margin:0 auto;
+	}
+	</code></pre>
+	</article><!-- .movie -->
+
+	<article id="video-0807" class="video">
+	<h3 class="titulo">8.7 Utilizando Mixins para el Panel</h3>
+	<h4>En custom.scss: </h4>
+	<pre><code class="language-sass">
+	h3 {
+		color:$primary-color;
+	}
+
+	.habitacion-panel {
+		@include panel(
+			$bg:$silver,
+			$padding:rem-calc(20),
+			$adjust: false,
+			$border:false
+		);
+		text-transform:uppercase;
+		color:$primary-color;
+	}
+	</code></pre>
+	<h4>Una vez terminado recuerda cambiar la clase del panel por habitacion-panel</h4>
+	</article><!-- .movie -->
+
+	<article id="video-0808" class="video">
+	<h3 class="titulo">8.8 Utilizando Mixins para los botones</h3>
+	<h4>En custom.scss: </h4>
+	<pre><code class="language-sass">
+	.custom-button {
+		@include button(
+			$padding: rem-calc(10),
+			$bg: $secondary-color,
+			$radius:true
+		);
+		font-size: rem-calc(16);
+		border-radius:rem-calc(10)!important;
+	}
+	</code></pre>
+	<h4>Una vez terminado recuerda cambiar la clase del panel por custom-button</h4>
+	</article><!-- .movie -->
+
+	<article id="video-0809" class="video">
+	<h3 class="titulo">8.9 Creando el Footer con SCSS y la navegación con Mixins</h3>
+	<h4>En custom.scss: </h4>
+	<pre><code class="language-sass">
+footer {
+	background-color: $primary-color;
+	padding-top: rem-calc(15);
+
+	h4 {
+		color: $white;
+		text-transform: uppercase;
+	}
+
+	p,a {
+		color: $white;
+	}
+	p.reservados {
+		background-color: $darkblue;
+		padding: rem-calc(10);
+		margin:0;
+	}
+	.footer-nav {
+		@include side-nav(
+			$divider-color:$white,
+			$font-size:rem-calc(16),
+			$link-color:$white,
+			$link-color-active:$secondary-color,
+			$link-color-hover:$white,
+			$link-bg-hover:$secondary-color
+		);
+
+		li {
+			margin: rem-calc(0);
+			a {
+				text-transform: uppercase;
+			}
+		}
+		input[type="text"].newsletter {
+			@include grid-column($columns:12);
+			box-shadow: none;
+		}
+
+
+	}
+
+}
+	</code></pre>
+	<h4>Una vez terminado recuerda cambiar la clase de la navegación por footer-nav</h4>
+	</article><!-- .movie -->
+
+
+	<article id="video-0810" class="video">
+	<h3 class="titulo">8.10 Finalizando el Footer</h3>
+	<h4>En custom.scss: </h4>
+	<pre><code class="language-sass">
+footer {
+	background-color: $primary-color;
+	padding-top: rem-calc(15);
+
+	h4 {
+		color: $white;
+		text-transform: uppercase;
+	}
+
+	p,a {
+		color: $white;
+	}
+	p.reserved {
+		background-color: $darkblue;
+		padding: rem-calc(10);
+		margin:0;
+	}
+
+	.footer-nav {
+		@include side-nav(
+			$divider-color:$white,
+			$font-size:rem-calc(16),
+			$link-color:$white,
+			$link-color-active:$secondary-color,
+			$link-color-hover:$white,
+			$link-bg-hover:$secondary-color
+		);
+
+		li {
+			margin: rem-calc(0);
+			a {
+				text-transform: uppercase;
+			}
+		}
+		input[type="text"].newsletter {
+			@include grid-column($columns:12);
+			box-shadow: none;
+		}
+
+
+	}
+
+}
+	</code></pre>
+	</article><!-- .movie -->
+
+	<article id="video-0811" class="video">
+	<h3 class="titulo">8.11 Media Queries en SASS y Foundation</h3>
+	<h4>En custom.scss: </h4>
+	<pre><code class="language-sass">
+@media #{$small-up} { }
+@media #{$small-only} { }
+
+@media #{$medium-up} { }
+@media #{$medium-only} { }
+
+@media #{$large-up} { }
+@media #{$large-only} { }
+
+@media #{$xlarge-up} { }
+@media #{$xlarge-only} { }
+
+@media #{$xxlarge-up} { }
+@media #{$xxlarge-only} { }
+	</code></pre>
+
+	<h4>En custom.scss dentro del MediaQuerie de large-up dentro de las llaves:</h4>
+	<pre><code class="language-sass">
+	.orbit-caption {
+		width: auto!important;
+		padding: rem-calc(30 20);
+		margin-bottom: rem-calc(50);
+	}
+	</code></pre>
+	</article><!-- .movie -->
+
+	<article id="video-0712" class="video">
+	<h3 class="titulo">7.12 Editando estilos para la imagen destacada</h3>
+	<h4>En custom.scss: </h4>
+	<pre><code class="language-sass">
+div.imagen-destacada {
+	position: relative;
+	margin-bottom:rem-calc(20);
+
+	.texto-destacada {
+		position:absolute;
+		left:0;
+		bottom:0;
+		padding: rem-calc(10 20);
+		background-color:$primary-color;
+		color:$white;
+
+		p {
+			margin: 0;
+		}
+	}
+}
+	</code></pre>
+
+	<h4>En custom.scss dentro del MediaQuerie de medium-up dentro de las llaves:</h4>
+	<pre><code class="language-sass">
+	div.imagen-destacada {
+
+		.texto-destacada {
+			bottom: rem-calc(30);
+			padding: rem-calc(10 50);
+		}
+	}
+	</code></pre>
+	</article><!-- .movie -->
+
+
+	<article id="video-0813" class="video">
+	<h3 class="titulo">8.13 Editando SCSS para Accordion</h3>
+	<h4>En custom.scss: </h4>
+	<pre><code class="language-sass">
+.accordion {
+		.accordion-navigation {
+			@include accordion-navigation(
+				$bg: $primary-color,
+				$padding: rem-calc(8),
+				$hover-bg: $secondary-color,
+				$active-bg: $secondary-color,
+				$font-color: $white,
+				$font-size:rem-calc(20)
+			);
+			text-transform: uppercase;
+		}
+		.content {
+			@include accordion-content;
+			text-transform: none;
+		}
+}
+	</code></pre>
+	</article><!-- .movie -->
+
+	<article id="video-0814" class="video">
+	<h3 class="titulo">8.14 Cambiando el SCSS de nuestro Formulario</h3>
+	<h4>En custom.scss: </h4>
+	<pre><code class="language-sass">
+form {
+	background-color: $white-smoke;
+	fieldset {
+		legend {
+			width:100%;
+			background-color: $secondary-color;
+			text-align:center;
+			color:$white;
+			font-size: rem-calc(22);
+			text-transform: uppercase;
+		}
+		label {
+			text-transform: uppercase;
+		}
+	}
+
+}
+	</code></pre>
+
+	<h4>En _settings.scss, alrededor de la linea 647, 652 y 655 buscar y reemplazar </h4>
+	<pre><code class="language-sass">
+   $form-label-font-color: $black;
+
+   $input-font-size: rem-calc(16);
+
+   $input-border-color: none;
+   $input-focus-border-color: none;
+   $input-border-style: none;
+
+   $input-box-shadow: none;
+	</code></pre>
+	</article><!-- .movie -->
+
+	<article id="video-0815" class="video">
+	<h3 class="titulo">8.15 Creando un Menu de Redes Sociales con Foundation Icons</h3>
+    <h4>En todas las páginas html:</h4>
+
+    <pre><code class="language-markup">
+        &lt;link rel="stylesheet" href="css/foundation-icons.css" />
+    </code></pre>
+
+	<h4>En custom.scss: </h4>
+	<pre><code class="language-sass">
+.menu-social {
+	li {
+		background-color:transparent!important;
+		display:inline-block;
+		margin-right:rem-calc(20);
+		a {
+			background-color:transparent!important;
+			padding:0;
+			margin:0;
+
+			i {
+				font-size: rem-calc(40);
+			}
+		}
+		a:hover {
+
+			i {
+				color:$white;
+			}
+		}
+	}
+}
+	</code></pre>
+
+	<h4>En todas nuestras páginas el header que contiene las redes debe quedar así: </h4>
+	<pre><code class="language-markup">
+        &lt;ul class="menu-social right">
+            &lt;li>&lt;a href="http://www.facebook.com">&lt;i class="fi-social-facebook">&lt;/i>&lt;/a>&lt;/li>
+            &lt;li>&lt;a href="http://www.twitter.com">&lt;i class="fi-social-twitter">&lt;/i>&lt;/a>&lt;/li>
+        &lt;/ul>
+	</code></pre>
+
+	<h4>En todas nuestras páginas el footer que contiene las redes debe quedar así: </h4>
+	<pre><code class="language-markup">
+        &lt;ul class="menu-social">
+            &lt;li>&lt;a href="http://www.facebook.com">&lt;i class="fi-social-facebook">&lt;/i>&lt;/a>&lt;/li>
+            &lt;li>&lt;a href="http://www.twitter.com">&lt;i class="fi-social-twitter">&lt;/i>&lt;/a>&lt;/li>
+        &lt;/ul>
+	</code></pre>
+	</article><!-- .movie -->
+
+	<article id="video-0816" class="video">
+	<h3 class="titulo">8.16 jQuery para detectar la página actual</h3>
+	<h4>En _settings.scss, alredor de la linea 1428 y 1429 buscar y cambiar: </h4>
+	<pre><code class="language-sass">
+   $topbar-link-bg-active: $secondary-color;
+   $topbar-link-bg-active-hover: $secondary-color;
+	</code></pre>
+
+	<h4>En cada archivo: index.html, servicios.html, etc cambiar en el body:</h4>
+	<pre><code class="language-markup">
+		&lt;body class="index">
+		&lt;body class="servicios">
+		&lt;body class="galeria">
+		&lt;body class="habitaciones">
+		&lt;body class="habitacion">
+		&lt;body class="contacto">
+	</code></pre>
+	<h4>En js/app.js:</h4>
+	<pre><code class="language-javascript">
+$(document).ready(function() {
+	$('.index header ul li a:contains("Inicio")').parent().addClass('active');
+	$('.contact header ul li a:contains("Contacto")').parent().addClass('active');
+	$('.gallery header ul li a:contains("Galeria")').parent().addClass('active');
+	$('.services header ul li a:contains("Servicios")').parent().addClass('active');
+	$('.rooms header ul li a:contains("Habitaciones")').parent().addClass('active');
+	$('.room header ul li a:contains("Habitacion")').parent().addClass('active');
+});
+	</code></pre>
+	</article><!-- .movie -->
+
+	<article id="video-0817" class="video">
+	<h3 class="titulo">8.17 Agregando una fuente de Google Fonts</h3>
+	<h4>En scss/app.scss antes del "custom" </h4>
+	<pre><code class="language-sass">
+    url(http://fonts.googleapis.com/css?family=Montserrat:400,700),
+	</code></pre>
+
+
+	<h4>En _settings.scss, alrededor de la linea 216 y 217 buscar y reemplazar</h4>
+	<pre><code class="language-sass">
+   $header-font-family: 'Montserrat', sans-serif;
+   $header-font-weight: 700;
+	</code></pre>
+	</article><!-- .movie -->
+
+
+	<article id="video-0818" class="video">
+	<h3 class="titulo">8.18 Data Interchange para cambiar el HTML en base al dispositivo</h3>
+	<h4>En index.html y habitaciones.html debemos tener una estructura como la siguiente, asegurate de cambiar titulos y rutas de imagenes. </h4>
+	<pre><code class="language-markup">
+      &lt;div class="large-4 medium-6 columns info-habitacion">
+
+     &lt;img data-interchange="[img/hotel-imagenes/small/habitaciones/habitacion01.jpg, (small)],
+                                             [img/hotel-imagenes/medium/habitaciones/habitacion01.jpg, (medium)],
+                                             [img/hotel-imagenes/default/habitaciones/habitacion01.jpg, (large)] ">
+
+        &lt;div class="room-panel">
+            &lt;h3 class="text-center">&lt;a href="habitacion01.html">Habitación 01&lt;/a>&lt;/h3>
+        &lt;/div>
+
+        &lt;div class="row">
+             &lt;div data-interchange="[partes/mas-info01.html, (large)]">&lt;/div>
+        &lt;/div>
+     &lt;/div> &lt;!--.large-4 -->
+	</code></pre>
+
+
+	<h4>partes/mas-info01.html, alrededor de la linea 216 y 217 buscar y reemplazar</h4>
+	<pre><code class="language-markup">
+	 &lt;div class="mas-informacion large-12 columns">
+			 &lt;a href="habitacion01.html" class="text-center">mas información &lt;/a>
+	 &lt;/div>
+	</code></pre>
+	</article><!-- .movie -->
+
+	<article id="video-0819" class="video">
+	<h3 class="titulo">8.19 Estilos para Data-Interchange HTML</h3>
+	<h4>En custom.scss dentro del Media Querie para Large-up</h4>
+	<pre><code class="language-sass">
+	.info-habitacion {
+		overflow: hidden;
+		cursor:pointer;
+		position: relative;
+
+		.mas-informacion {
+			background-color:rgba($primary-color, 0.8);
+			background-clip: content-box;
+			height:100%;
+			width:100%;
+			position:absolute;
+			top:0;
+			right:0;
+			opacity: 0;
+			transition: all 1s ease;
+
+			a {
+				font-size: rem-calc(24);
+				border: 5px solid $white;
+				width:80%;
+				margin:0 auto;
+				color:$white;
+				margin-top:rem-calc(120);
+				display: block;
+			}
+		}
+	}
+
+	.info-habitacion:hover {
+
+		.mas-informacion {
+			opacity: 1;
+		}
+	}
+	</code></pre>
+	</article><!-- .movie -->
+
+	<article id="video-0820" class="video">
+	<h3 class="titulo">8.20 Ajustes finales para móviles</h3>
+	<h4>En _settings.scss alrededor de la linea 1438</h4>
+	<pre><code class="language-sass">
+   $topbar-dropdown-bg: $primary-color;
+
+   $topbar-dropdown-link-bg: $darkblue;
+   $topbar-dropdown-link-bg-hover: $secondary-color;
+	</code></pre>
+	<h4>En custom.scss agregar:</h4>
+	<pre><code class="language-sass">
+	div.slider {
+		margin-bottom:rem-calc(20);
+	}
+	</code></pre>
+	<h4>Y dentro del MediaQuerie de medium-up</h4>
+	<pre><code class="language-sass">
+	div.slider {
+		margin-bottom:rem-calc(0);
+	}
+	</code></pre>
+	<h4>En custom.scss agregamos: </h4>
+	<pre><code class="language-sass">
+	div.info-habitacion {
+		margin-bottom:rem-calc(20);
+	}
+	</code></pre>
+
+	<h4>En index.html agregamos donde estan los cuartos y tenemos nuestro botón: </h4>
+	<pre><code class="language-markup">
+      &lt;div class="row">
+          &lt;div class="large-12 columns">
+               &lt;a href="habitaciones.html" class="custom-button  right">ver todas&lt;/a>
+          &lt;/div>
+      &lt;/div>
+	</code></pre>
+	</article><!-- .movie -->
+</section>
+
+
+<section id="capitulo-09" class="chapter">
+
+	<article id="video-0901" class="video">
+	<h3 class="titulo">9.01 Ventajas de SASS</h3>
+	<h4>No hay Snippets aquí, te invito a realizar tus propias combinaciones de colores!</h4>
+	</article><!-- .movie -->
+
+</section>
+
+
+</div> <!--.contenedor -->
+
+<style>
+body {
+	background-color: #006495;
+}
+h2 {
+	margin:0;
+}
+section.chapter {
+	background-color: #fff;
+	padding:20px;
+	margin-bottom: 20px;
+}
+article:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+h3.titulo {
+	color:#006495;
+}
+a.botton {
+	color:#fff;
+	background-color:#006495;
+	float:right;
+	font-family: arial, helvetica, sans-serif;
+	text-decoration: none;
+	padding: 5px 20px;
+	margin-top: 20px;
+	border-radius: 10px;
+	font-size: 12px;
+	text-transform: uppercase;
+}
+</style>
+
+<script>
+	$(document).ready(function() {
+		$( ".video" ).append( "<a data-scroll href='#toc' class='botton'>ir Arriba</a>" );
+		smoothScroll.init();
+	});
+</script>
+</body>
+</html>
